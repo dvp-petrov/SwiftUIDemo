@@ -9,12 +9,11 @@ import SwiftUI
 
 /*
  TODO: refactor InitialSceneView
- 1. Extract fonts in constant reusable manner.
- 2. Extract images in constant reusable manner.
- 3. Extract colors in constant reusable manner.
- 4. Refactor layout for smaller screens?
- 5. Consider placing the logoImage(from top) and buttons(from bottom) with smaller padding if there are no safe area insets.
- 6. Add actions to button views.
+ 1. Extract images in constant reusable manner.
+ 2. Extract colors in constant reusable manner.
+ 3. Refactor layout for smaller screens?
+ 4. Consider placing the logoImage(from top) and buttons(from bottom) with smaller padding if there are no safe area insets.
+ 5. Add actions to button views.
  **/
 
 struct InitialSceneView: View {
@@ -69,10 +68,10 @@ struct InitialSceneView: View {
     private var texts: some View {
         VStack(spacing: 15) {
             Text("We are what we do")
-                .font(.custom("HelveticaNeue-Bold", size: 30))
+                .font(.custom(.helveticaNeueBold, size: 30))
                 .foregroundColor(Color(red: 63/255, green: 65/255, blue: 78/255, opacity: 1))
             Text("Thousand of people are using silent moon\nfor small meditations")
-                .font(.custom("HelveticaNeue-Light", size: 16))
+                .font(.custom(.helveticaNeueLight, size: 16))
                 .foregroundColor(Color(red: 161/255, green: 164/255, blue: 178/255))
                 .lineSpacing(8)
         }
@@ -99,7 +98,7 @@ struct InitialSceneView: View {
                 }
             }
         }
-        .font(.custom("HelveticaNeue-Medium", size: 14))
+        .font(.custom(.helveticaNeueMedium, size: 14))
     }
     
 }
