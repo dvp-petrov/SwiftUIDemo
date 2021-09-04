@@ -15,6 +15,8 @@
 		1135623C26E23FAF007F443E /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135623B26E23FAF007F443E /* SwiftUIDemoUITests.swift */; };
 		1135624B26E36F09007F443E /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135624A26E36F09007F443E /* Font+custom.swift */; };
 		1135624D26E36F71007F443E /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135624C26E36F71007F443E /* CustomFont.swift */; };
+		1135624F26E3911B007F443E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1135624E26E3911B007F443E /* Colors.xcassets */; };
+		1135625226E396EF007F443E /* Color+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625126E396EF007F443E /* Color+custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1135623D26E23FAF007F443E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1135624A26E36F09007F443E /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
 		1135624C26E36F71007F443E /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		1135624E26E3911B007F443E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1135625126E396EF007F443E /* Color+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,14 @@
 		1135621D26E23FAC007F443E /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1135625026E396DB007F443E /* Colors */,
 				1135624926E36EE1007F443E /* Fonts */,
 				1135621E26E23FAC007F443E /* SwiftUIDemoApp.swift */,
 				1135622026E23FAC007F443E /* InitialSceneView.swift */,
-				1135622226E23FAF007F443E /* Assets.xcassets */,
 				1135622726E23FAF007F443E /* Info.plist */,
 				1135622426E23FAF007F443E /* Preview Content */,
+				1135622226E23FAF007F443E /* Assets.xcassets */,
+				1135624E26E3911B007F443E /* Colors.xcassets */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				1135624C26E36F71007F443E /* CustomFont.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1135625026E396DB007F443E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				1135625126E396EF007F443E /* Color+custom.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1135624F26E3911B007F443E /* Colors.xcassets in Resources */,
 				1135622626E23FAF007F443E /* Preview Assets.xcassets in Resources */,
 				1135622326E23FAF007F443E /* Assets.xcassets in Resources */,
 			);
@@ -275,6 +290,7 @@
 			files = (
 				1135622126E23FAC007F443E /* InitialSceneView.swift in Sources */,
 				1135624D26E36F71007F443E /* CustomFont.swift in Sources */,
+				1135625226E396EF007F443E /* Color+custom.swift in Sources */,
 				1135624B26E36F09007F443E /* Font+custom.swift in Sources */,
 				1135621F26E23FAC007F443E /* SwiftUIDemoApp.swift in Sources */,
 			);
