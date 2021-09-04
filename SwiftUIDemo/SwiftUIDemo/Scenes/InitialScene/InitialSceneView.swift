@@ -79,25 +79,10 @@ struct InitialSceneView: View {
     
     private var buttons: some View {
         VStack(spacing: 20) {
-            Button(action: {}) {
-                Text("SIGN UP")
-                    .foregroundColor(.magnolia)
-            }
-            .frame(maxWidth: .infinity,
-                   maxHeight: 63)
-            .background(Color.violet)
-            .clipShape(Capsule())
+            WideRoundedButton(title: "SIGN UP")
             .padding(.horizontal, 20)
-            Button(action: {}) {
-                HStack(spacing: 0) {
-                    Text("ALREADY HAVE AN ACCOUNT? ")
-                        .foregroundColor(.darkGray)
-                    Text("LOG IN")
-                        .foregroundColor(.carolinaBlue)
-                }
-            }
+            AlreadyAnUserButton(title: "LOG IN")
         }
-        .font(.custom(.helveticaNeueMedium, size: 14))
     }
     
 }

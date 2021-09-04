@@ -17,6 +17,11 @@
 		1135624D26E36F71007F443E /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135624C26E36F71007F443E /* CustomFont.swift */; };
 		1135624F26E3911B007F443E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1135624E26E3911B007F443E /* Colors.xcassets */; };
 		1135625226E396EF007F443E /* Color+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625126E396EF007F443E /* Color+custom.swift */; };
+		1135625726E39A76007F443E /* SignInSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625626E39A76007F443E /* SignInSceneView.swift */; };
+		1135625A26E3A8A0007F443E /* View+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625926E3A8A0007F443E /* View+Placeholder.swift */; };
+		1135625D26E3AD93007F443E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625C26E3AD93007F443E /* CustomTextField.swift */; };
+		1135625F26E3BC31007F443E /* WideRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625E26E3BC31007F443E /* WideRoundedButton.swift */; };
+		1135626126E3C61C007F443E /* AlreadyAnUserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135626026E3C61C007F443E /* AlreadyAnUserButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		1135624C26E36F71007F443E /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		1135624E26E3911B007F443E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1135625126E396EF007F443E /* Color+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+custom.swift"; sourceTree = "<group>"; };
+		1135625626E39A76007F443E /* SignInSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSceneView.swift; sourceTree = "<group>"; };
+		1135625926E3A8A0007F443E /* View+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Placeholder.swift"; sourceTree = "<group>"; };
+		1135625C26E3AD93007F443E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1135625E26E3BC31007F443E /* WideRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideRoundedButton.swift; sourceTree = "<group>"; };
+		1135626026E3C61C007F443E /* AlreadyAnUserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyAnUserButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +113,12 @@
 		1135621D26E23FAC007F443E /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1135625B26E3AD4B007F443E /* CustomViews */,
+				1135625426E398C0007F443E /* Scenes */,
 				1135625026E396DB007F443E /* Colors */,
 				1135624926E36EE1007F443E /* Fonts */,
+				1135625826E3A875007F443E /* Extension */,
 				1135621E26E23FAC007F443E /* SwiftUIDemoApp.swift */,
-				1135622026E23FAC007F443E /* InitialSceneView.swift */,
 				1135622726E23FAF007F443E /* Info.plist */,
 				1135622426E23FAF007F443E /* Preview Content */,
 				1135622226E23FAF007F443E /* Assets.xcassets */,
@@ -156,6 +168,49 @@
 				1135625126E396EF007F443E /* Color+custom.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		1135625326E398B3007F443E /* InitialScene */ = {
+			isa = PBXGroup;
+			children = (
+				1135622026E23FAC007F443E /* InitialSceneView.swift */,
+			);
+			path = InitialScene;
+			sourceTree = "<group>";
+		};
+		1135625426E398C0007F443E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1135625526E398C9007F443E /* SignInScene */,
+				1135625326E398B3007F443E /* InitialScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1135625526E398C9007F443E /* SignInScene */ = {
+			isa = PBXGroup;
+			children = (
+				1135625626E39A76007F443E /* SignInSceneView.swift */,
+			);
+			path = SignInScene;
+			sourceTree = "<group>";
+		};
+		1135625826E3A875007F443E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1135625926E3A8A0007F443E /* View+Placeholder.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1135625B26E3AD4B007F443E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1135625C26E3AD93007F443E /* CustomTextField.swift */,
+				1135625E26E3BC31007F443E /* WideRoundedButton.swift */,
+				1135626026E3C61C007F443E /* AlreadyAnUserButton.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1135622126E23FAC007F443E /* InitialSceneView.swift in Sources */,
+				1135625A26E3A8A0007F443E /* View+Placeholder.swift in Sources */,
+				1135625F26E3BC31007F443E /* WideRoundedButton.swift in Sources */,
 				1135624D26E36F71007F443E /* CustomFont.swift in Sources */,
 				1135625226E396EF007F443E /* Color+custom.swift in Sources */,
+				1135625D26E3AD93007F443E /* CustomTextField.swift in Sources */,
+				1135625726E39A76007F443E /* SignInSceneView.swift in Sources */,
 				1135624B26E36F09007F443E /* Font+custom.swift in Sources */,
+				1135626126E3C61C007F443E /* AlreadyAnUserButton.swift in Sources */,
 				1135621F26E23FAC007F443E /* SwiftUIDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
