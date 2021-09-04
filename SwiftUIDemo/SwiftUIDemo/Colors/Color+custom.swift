@@ -14,5 +14,8 @@ extension Color {
     static let outerSpace = Color("Outer Space")
     static let magnolia = Color("Magnolia")
     static let violet = Color("Violet")
+    static let munsell = Color("Munsell")
+    static let ube = Color("Ube")
+    static let isabelline = Color("Isabelline")
     
 }
