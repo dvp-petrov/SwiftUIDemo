@@ -10,9 +10,10 @@ import SwiftUI
 struct AlreadyAnUserButton: View {
     
     var title: String
+    let action: () -> Void
     
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             HStack(spacing: 0) {
                 Text("ALREADY HAVE AN ACCOUNT? ")
                     .foregroundColor(.darkGray)
@@ -27,6 +28,6 @@ struct AlreadyAnUserButton: View {
 
 struct AlreadyAnUserButton_Previews: PreviewProvider {
     static var previews: some View {
-        AlreadyAnUserButton(title: "Action Title")
+        AlreadyAnUserButton(title: "Action Title", action: {})
     }
 }

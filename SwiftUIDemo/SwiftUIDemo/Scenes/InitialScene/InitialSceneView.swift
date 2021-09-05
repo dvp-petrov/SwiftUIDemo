@@ -15,7 +15,16 @@ import SwiftUI
  4. Add actions to button views.
  **/
 
-struct InitialSceneView: View {
+protocol InitialSceneViewModelProtocol: ObservableObject {
+    var titleText: String { get }
+    var descriptionText: String { get }
+    func signUp()
+    func logIn()
+}
+
+struct InitialSceneView<ViewModel: InitialSceneViewModelProtocol>: View {
+    
+    @ObservedObject var viewModel: ViewModel
     
     private let verticalSpacingBetweenImageAndTexts: CGFloat = 30
     @State private var contentImageMaxY: CGFloat = 0
@@ -66,10 +75,10 @@ struct InitialSceneView: View {
     
     private var texts: some View {
         VStack(spacing: 15) {
-            Text("We are what we do")
+            Text(viewModel.titleText)
                 .font(.custom(.helveticaNeueBold, size: 30))
                 .foregroundColor(.outerSpace)
-            Text("Thousand of people are using silent moon\nfor small meditations")
+            Text(viewModel.descriptionText)
                 .font(.custom(.helveticaNeueLight, size: 16))
                 .foregroundColor(.darkGray)
                 .lineSpacing(8)
@@ -79,9 +88,9 @@ struct InitialSceneView: View {
     
     private var buttons: some View {
         VStack(spacing: 20) {
-            WideRoundedButton(title: "SIGN UP")
+            WideRoundedButton(title: "SIGN UP", action: viewModel.signUp)
             .padding(.horizontal, 20)
-            AlreadyAnUserButton(title: "LOG IN")
+            AlreadyAnUserButton(title: "LOG IN", action: viewModel.logIn)
         }
     }
     
@@ -89,6 +98,6 @@ struct InitialSceneView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialSceneView()
+        InitialSceneView(viewModel: InitialSceneViewModel())
     }
 }

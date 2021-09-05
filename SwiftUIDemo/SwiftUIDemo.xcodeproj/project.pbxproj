@@ -22,6 +22,7 @@
 		1135625D26E3AD93007F443E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625C26E3AD93007F443E /* CustomTextField.swift */; };
 		1135625F26E3BC31007F443E /* WideRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135625E26E3BC31007F443E /* WideRoundedButton.swift */; };
 		1135626126E3C61C007F443E /* AlreadyAnUserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135626026E3C61C007F443E /* AlreadyAnUserButton.swift */; };
+		1135626326E4C42C007F443E /* InitialSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135626226E4C42C007F443E /* InitialSceneViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		1135625C26E3AD93007F443E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1135625E26E3BC31007F443E /* WideRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideRoundedButton.swift; sourceTree = "<group>"; };
 		1135626026E3C61C007F443E /* AlreadyAnUserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyAnUserButton.swift; sourceTree = "<group>"; };
+		1135626226E4C42C007F443E /* InitialSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				1135622026E23FAC007F443E /* InitialSceneView.swift */,
+				1135626226E4C42C007F443E /* InitialSceneViewModel.swift */,
 			);
 			path = InitialScene;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				1135625A26E3A8A0007F443E /* View+Placeholder.swift in Sources */,
 				1135625F26E3BC31007F443E /* WideRoundedButton.swift in Sources */,
 				1135624D26E36F71007F443E /* CustomFont.swift in Sources */,
+				1135626326E4C42C007F443E /* InitialSceneViewModel.swift in Sources */,
 				1135625226E396EF007F443E /* Color+custom.swift in Sources */,
 				1135625D26E3AD93007F443E /* CustomTextField.swift in Sources */,
 				1135625726E39A76007F443E /* SignInSceneView.swift in Sources */,

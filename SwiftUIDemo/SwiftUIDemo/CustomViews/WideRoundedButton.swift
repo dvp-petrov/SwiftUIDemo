@@ -10,9 +10,10 @@ import SwiftUI
 struct WideRoundedButton: View {
     
     var title: String
+    let action: () -> Void
     
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             Text(title)
                 .foregroundColor(.magnolia)
         }
@@ -27,6 +28,6 @@ struct WideRoundedButton: View {
 
 struct WideRoundedButton_Previews: PreviewProvider {
     static var previews: some View {
-        WideRoundedButton(title: "Title")
+        WideRoundedButton(title: "Title", action: {})
     }
 }

@@ -33,7 +33,7 @@ struct SignInSceneView: View {
             }
             VStack {
                 Spacer()
-                AlreadyAnUserButton(title: "SIGN UP")
+                AlreadyAnUserButton(title: "SIGN UP", action: {})
                 .padding(.bottom, 60)
             }
         }
@@ -130,7 +130,7 @@ struct SignInSceneView: View {
     
     private var signInButtons: some View {
         VStack(spacing: defaultVerticalSpacing) {
-            WideRoundedButton(title: "LOG IN")
+            WideRoundedButton(title: "LOG IN", action: {})
             Button(action: {}) {
                 Text("Forgot Password?")
             }
