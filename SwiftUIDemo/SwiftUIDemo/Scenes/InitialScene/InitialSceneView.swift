@@ -12,12 +12,13 @@ import SwiftUI
  1. Extract images in constant reusable manner.
  2. Refactor layout for smaller screens?
  3. Consider placing the logoImage(from top) and buttons(from bottom) with smaller padding if there are no safe area insets.
- 4. Add actions to button views.
  **/
 
 protocol InitialSceneViewModelProtocol: ObservableObject {
     var titleText: String { get }
     var descriptionText: String { get }
+    var signUpButtonTitle: String { get }
+    var logInButtonTitle: String { get }
     func signUp()
     func logIn()
 }
@@ -88,9 +89,9 @@ struct InitialSceneView<ViewModel: InitialSceneViewModelProtocol>: View {
     
     private var buttons: some View {
         VStack(spacing: 20) {
-            WideRoundedButton(title: "SIGN UP", action: viewModel.signUp)
+            WideRoundedButton(title: viewModel.signUpButtonTitle, action: viewModel.signUp)
             .padding(.horizontal, 20)
-            AlreadyAnUserButton(title: "LOG IN", action: viewModel.logIn)
+            AlreadyAnUserButton(title: viewModel.logInButtonTitle, action: viewModel.logIn)
         }
     }
     
