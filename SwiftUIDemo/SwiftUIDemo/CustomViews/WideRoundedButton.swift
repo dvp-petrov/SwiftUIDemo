@@ -14,14 +14,8 @@ struct WideRoundedButton: View {
     
     var body: some View {
         Button(action: action) {
-            Text(title)
-                .foregroundColor(.magnolia)
+            CapsuledButtonView(text: title)
         }
-        .font(.custom(.helveticaNeueMedium, size: 14))
-        .frame(maxWidth: .infinity,
-               maxHeight: 63)
-        .background(Color.violet)
-        .clipShape(Capsule())
     }
     
 }

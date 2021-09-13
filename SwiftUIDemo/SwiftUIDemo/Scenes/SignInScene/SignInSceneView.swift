@@ -19,7 +19,7 @@ struct SignInSceneView: View {
             }
             VStack {
                 HStack {
-                    backButton
+                    BackButtonView()
                         .padding(.top, 50)
                         .padding(.leading, 20)
                     Spacer()
@@ -47,18 +47,6 @@ struct SignInSceneView: View {
             .opacity(0.1)
     }
     
-    private var backButton: some View {
-        Image("arrow")
-            .padding(.horizontal, 18.15)
-            .padding(.vertical, 18.5)
-            .background(Color.white)
-            .overlay(
-                Circle().stroke(lineWidth: 1)
-                    .foregroundColor(.isabelline)
-            )
-            .clipShape(Circle())
-    }
-    
     private var contentViews: some View {
         VStack(spacing: defaultVerticalSpacing) {
             Text("Welcome Back!")
@@ -80,44 +68,11 @@ struct SignInSceneView: View {
     private var socialButtons: some View {
         VStack(spacing: defaultVerticalSpacing) {
             Button(action: {}) {
-                HStack(spacing: 0) {
-                    Image("fb_icon")
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(maxWidth: 24, maxHeight: 24)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 34)
-                    Text("CONTINUE WITH FACEBOOK")
-                        .foregroundColor(.magnolia)
-                        .font(.custom(.helveticaNeueMedium, size: 14))
-                    Spacer()
-                }
+                FacebookLoginButtonView()
             }
-            .frame(maxWidth: .infinity,
-                   maxHeight: 63)
-            .background(Color.ube)
-            .clipShape(Capsule())
             Button(action: {}) {
-                HStack(spacing: 0) {
-                    Image("google_icon")
-                        .resizable()
-                        .frame(maxWidth: 24, maxHeight: 24)
-                        .padding(.horizontal, 34)
-                    Text("CONTINUE WITH GOOGLE")
-                        .foregroundColor(.outerSpace)
-                        .font(.custom(.helveticaNeueMedium, size: 14))
-                    Spacer()
-                }
+                GoogleLoginButtonView()
             }
-            .frame(maxWidth: .infinity,
-                   maxHeight: 63)
-            .background(Color.white)
-            .overlay(
-                Capsule()
-                    .stroke(lineWidth: 1)
-                    .foregroundColor(.isabelline)
-            )
-            .clipShape(Capsule())
         }
     }
     
