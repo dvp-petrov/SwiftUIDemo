@@ -22,7 +22,7 @@ struct FacebookLoginButtonView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity,
-               maxHeight: 63)
+               minHeight: 63)
         .background(Color.ube)
         .clipShape(Capsule())
     }

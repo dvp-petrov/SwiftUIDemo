@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct SignUpSceneView: View {
+protocol SignUpViewModelProtocol: ObservableObject {
+    var usernameText: String { get set }
+    var emailText: String { get set }
+    var passwordText: String { get set }
+    var isPrivacyPolicyChecked: Bool { get set }
+}
+
+struct SignUpSceneView<ViewModel: SignUpViewModelProtocol>: View {
     
-    @State private var isPrivacyPolicyChecked: Bool = false
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-//        NavigationView {
+        ScrollView {
             VStack(spacing: 0) {
                 backButton
                     .padding(.top, 50)
@@ -31,14 +39,20 @@ struct SignUpSceneView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 20)
+            .padding(.bottom, 85)
             .edgesIgnoringSafeArea(.all)
-            .navigationBarHidden(true)
-//        }
+        }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     private var backButton: some View {
         HStack(spacing: 0) {
-            BackButtonView()
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                BackButtonView()
+            }
             Spacer()
         }
     }
@@ -64,9 +78,9 @@ struct SignUpSceneView: View {
     
     private var textFields: some View {
         VStack(spacing: 20) {
-            Text("text field - username")
-            Text("text field - email")
-            Text("text field - password")
+            CustomTextField(placeholder: "Username", text: $viewModel.usernameText)
+            CustomTextField(placeholder: "email", text: $viewModel.emailText)
+            CustomTextField(placeholder: "password", text: $viewModel.passwordText)
         }
     }
     
@@ -80,7 +94,7 @@ struct SignUpSceneView: View {
             }
             .font(.custom(.helveticaNeueMedium, size: 14))
             Spacer()
-            CheckmarkView(isChecked: $isPrivacyPolicyChecked)
+            CheckmarkView(isChecked: $viewModel.isPrivacyPolicyChecked)
         }
     }
     
@@ -92,6 +106,6 @@ struct SignUpSceneView: View {
 
 struct SignUpSceneView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpSceneView()
+        SignUpSceneView(viewModel: SignUpViewModel())
     }
 }

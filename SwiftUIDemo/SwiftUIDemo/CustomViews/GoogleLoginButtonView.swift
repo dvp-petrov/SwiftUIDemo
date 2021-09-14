@@ -20,7 +20,7 @@ struct GoogleLoginButtonView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity,
-               maxHeight: 63)
+               minHeight: 63)
         .background(Color.white)
         .overlay(
             Capsule()

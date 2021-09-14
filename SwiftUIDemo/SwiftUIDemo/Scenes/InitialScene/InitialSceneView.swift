@@ -19,8 +19,6 @@ protocol InitialSceneViewModelProtocol: ObservableObject {
     var descriptionText: String { get }
     var signUpButtonTitle: String { get }
     var logInButtonTitle: String { get }
-    func signUp()
-    func logIn()
 }
 
 struct InitialSceneView<ViewModel: InitialSceneViewModelProtocol>: View {
@@ -31,32 +29,34 @@ struct InitialSceneView<ViewModel: InitialSceneViewModelProtocol>: View {
     @State private var contentImageMaxY: CGFloat = 0
     
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                contentImage
-                Spacer()
-            }
-            VStack(spacing: 0) {
-                logoImage
-                Spacer()
-            }
-            .padding(.top, 50)
-            GeometryReader { reader in
-                HStack(spacing: 0) {
-                    Spacer()
-                    texts
+        NavigationView {
+            ZStack {
+                VStack(spacing: 0) {
+                    contentImage
                     Spacer()
                 }
-                .offset(y: contentImageMaxY +
-                            verticalSpacingBetweenImageAndTexts)
+                VStack(spacing: 0) {
+                    logoImage
+                    Spacer()
+                }
+                .padding(.top, 50)
+                GeometryReader { reader in
+                    HStack(spacing: 0) {
+                        Spacer()
+                        texts
+                        Spacer()
+                    }
+                    .offset(y: contentImageMaxY +
+                                verticalSpacingBetweenImageAndTexts)
+                }
+                VStack {
+                    Spacer()
+                    buttons
+                }
+                .padding(.bottom, 94)
             }
-            VStack {
-                Spacer()
-                buttons
-            }
-            .padding(.bottom, 94)
+            .ignoresSafeArea(.all, edges: .all)
         }
-        .ignoresSafeArea()
     }
     
     private var logoImage: some View {
@@ -89,9 +89,13 @@ struct InitialSceneView<ViewModel: InitialSceneViewModelProtocol>: View {
     
     private var buttons: some View {
         VStack(spacing: 20) {
-            WideRoundedButton(title: viewModel.signUpButtonTitle, action: viewModel.signUp)
-            .padding(.horizontal, 20)
-            AlreadyAnUserButton(title: viewModel.logInButtonTitle, action: viewModel.logIn)
+            NavigationLink(
+                destination: SignUpSceneView(viewModel: SignUpViewModel()),
+                label: {
+                    CapsuledButtonView(text: viewModel.signUpButtonTitle)
+                    
+                }).padding(.horizontal, 20)
+            AlreadyAnUserButton(title: viewModel.logInButtonTitle, action: {})
         }
     }
     

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignInSceneView: View {
 
+    @State private var emailText: String = ""
+    @State private var passwordText: String = ""
     private let defaultVerticalSpacing: CGFloat = 20
     
     var body: some View {
@@ -78,8 +80,8 @@ struct SignInSceneView: View {
     
     private var textFields: some View {
         VStack(spacing: defaultVerticalSpacing) {
-            CustomTextField(placeholder: "Email address")
-            CustomTextField(placeholder: "Password")
+            CustomTextField(placeholder: "Email address", text: $emailText)
+            CustomTextField(placeholder: "Password", text: $emailText)
         }
     }
     

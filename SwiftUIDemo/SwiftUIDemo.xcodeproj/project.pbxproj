@@ -29,6 +29,7 @@
 		11B5B35826EA3E9600C199E8 /* FacebookLoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5B35726EA3E9600C199E8 /* FacebookLoginButtonView.swift */; };
 		11B5B35A26EA3F5300C199E8 /* GoogleLoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5B35926EA3F5300C199E8 /* GoogleLoginButtonView.swift */; };
 		11B5B35C26EF71AE00C199E8 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5B35B26EF71AE00C199E8 /* CheckmarkView.swift */; };
+		11B5B35E26EFC36800C199E8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5B35D26EFC36800C199E8 /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		11B5B35726EA3E9600C199E8 /* FacebookLoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginButtonView.swift; sourceTree = "<group>"; };
 		11B5B35926EA3F5300C199E8 /* GoogleLoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginButtonView.swift; sourceTree = "<group>"; };
 		11B5B35B26EF71AE00C199E8 /* CheckmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkView.swift; sourceTree = "<group>"; };
+		11B5B35D26EFC36800C199E8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				11B5B35126E9FA1F00C199E8 /* SignUpSceneView.swift */,
+				11B5B35D26EFC36800C199E8 /* SignUpViewModel.swift */,
 			);
 			path = SignUpScene;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				1135625A26E3A8A0007F443E /* View+Placeholder.swift in Sources */,
 				11B5B35426EA2B0C00C199E8 /* BackButtonView.swift in Sources */,
 				11B5B35A26EA3F5300C199E8 /* GoogleLoginButtonView.swift in Sources */,
+				11B5B35E26EFC36800C199E8 /* SignUpViewModel.swift in Sources */,
 				1135625F26E3BC31007F443E /* WideRoundedButton.swift in Sources */,
 				1135624D26E36F71007F443E /* CustomFont.swift in Sources */,
 				1135626326E4C42C007F443E /* InitialSceneViewModel.swift in Sources */,

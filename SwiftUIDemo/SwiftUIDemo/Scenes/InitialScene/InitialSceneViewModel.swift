@@ -24,10 +24,4 @@ class InitialSceneViewModel: InitialSceneViewModelProtocol {
         self.logInButtonTitle = logInButtonTitle
     }
     
-    func signUp() {
-    }
-    
-    func logIn() {
-    }
-    
 }
